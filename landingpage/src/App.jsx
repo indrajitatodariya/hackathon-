@@ -1,10 +1,8 @@
-import Home from "./components/button";
-import Accordionm from "./components/exp";
+import Hero from "./hero"
 
 function App(){
   return<>
-  <Home />
-  <Accordionm />
+ <Hero />
   </>
 }
 
