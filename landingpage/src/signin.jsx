@@ -1,6 +1,20 @@
+import { useState } from 'react'
 import logo1 from './assets/logo1.svg'
 
 export default function Sign() {
+    const [inputval,setInputval]=useState('')
+    const [password,setPassword]=useState('')
+    
+    function handleinput(e){
+        setInputval(e.target.value)
+        console.log(inputval);  
+    }
+
+    function handlepassword(e){
+        setPassword(e.target.value)
+        console.log(password);
+        
+    }
     return (
       <>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -28,6 +42,7 @@ export default function Sign() {
                     type="email"
                     required
                     autoComplete="email"
+                    onChange={handleinput}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -50,6 +65,7 @@ export default function Sign() {
                     name="password"
                     type="password"
                     required
+                    onChange={handlepassword}
                     autoComplete="current-password"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
