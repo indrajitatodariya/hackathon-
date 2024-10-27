@@ -1,6 +1,8 @@
 import Hero from "./hero"
 import Sign from "./signin"
 import Ctc from "./ctc"
+
+// import CarouselPlugin from './slider.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 function App(){

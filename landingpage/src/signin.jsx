@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo1 from './assets/logo1.svg'
+import {GoogleOAuthProvider, GoogleLogin} from '@react-oauth/google';
 
 export default function Sign() {
     const [inputval,setInputval]=useState('')
@@ -16,7 +17,7 @@ export default function Sign() {
         
     }
     return (
-      <>
+      <GoogleOAuthProvider>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
@@ -24,12 +25,26 @@ export default function Sign() {
               src={logo1}
               className="mx-auto h-10 w-auto"
             />
-            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            <h2 className="mt-7 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Sign in to your account
             </h2>
           </div>
+
+          <div className='flex justify-center pt-6 items-center gap-10'>
+            <a href="#" className='px-9 py-2 text-black border border-black rounded-md '> 
+              Google
+            </a>
+            <a href="#" className='px-9 py-2 text-black border border-black rounded-md'>
+              facebook
+            </a>
+
+          </div>
+
+          <div className='flex justify-center items-center pt-3 w-full mt-4'>
+            <span className=' text-black'>OR</span>
+          </div>
   
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <div className="mt-1 sm:mx-auto pt-1 sm:w-full sm:max-w-sm">
             <form action="#" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
@@ -85,12 +100,12 @@ export default function Sign() {
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
               <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                Start a 14 day free trial
+                Sign Up
               </a>
             </p>
           </div>
         </div>
-      </>
+      </GoogleOAuthProvider>
     )
   }
   
