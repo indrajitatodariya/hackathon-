@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import logo1 from './assets/logo1.svg'
 import {GoogleOAuthProvider, GoogleLogin} from '@react-oauth/google';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Sign() {
     const [inputval,setInputval]=useState('')
     const [password,setPassword]=useState('')
-    
+  
     function handleinput(e){
         setInputval(e.target.value)
         console.log(inputval);  
@@ -14,8 +16,25 @@ export default function Sign() {
     function handlepassword(e){
         setPassword(e.target.value)
         console.log(password);
-        
     }
+
+    const handleSubmit = async () => {
+      try {
+        await axios.post('http://localhost:3000/data', {
+          email: inputval,
+          password: password
+        });
+        setInputval('');
+        setPassword('');
+
+        alert('Data sent successfully!');
+
+      } catch (error) {
+        console.error('Error sending data:', error);
+        alert('Error sending data.');
+      }
+    }
+
     return (
       <GoogleOAuthProvider>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -91,6 +110,8 @@ export default function Sign() {
                 <button
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  onClick={handleSubmit}
+                  Link to="dash-board"
                 >
                   Sign in
                 </button>

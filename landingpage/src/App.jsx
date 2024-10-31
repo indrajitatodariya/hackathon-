@@ -1,10 +1,10 @@
 import Hero from "./hero"
 import Sign from "./signin"
 import Ctc from "./ctc"
-
-// import CarouselPlugin from './slider.jsx'
+import Dashboard from "./dashbord"
+import Page from "./app/dashboard/page"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-
+import './App.css'
 function App(){
   const router=createBrowserRouter([{
     path:"/",
@@ -15,6 +15,13 @@ function App(){
   {
     path:"/sign-in",
     element: <Sign />
+  },
+  {
+    path:"/sign-in/dash-board",
+    element:<>
+      <Dashboard />
+      <Page />
+    </>
   }
 ])
   return<>
