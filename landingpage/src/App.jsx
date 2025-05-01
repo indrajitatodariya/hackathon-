@@ -4,6 +4,7 @@ import Ctc from "./ctc"
 import Dashboard from "./dashbord"
 import Page from "./app/dashboard/page"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+
 import './App.css'
 function App(){
   const router=createBrowserRouter([{
@@ -17,10 +18,9 @@ function App(){
     element: <Sign />
   },
   {
-    path:"/sign-in/dash-board",
+    path:"/sign-in/dash-board/overview",
     element:<>
-      <Dashboard />
-      <Page />
+      <Dashboard /><Page />
     </>
   }
 ])

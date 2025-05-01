@@ -250,6 +250,12 @@ const chartConfig1 = {
                     Dashboard
                   </BreadcrumbLink>
                 </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                <BreadcrumbLink>
+                Overview
+                </BreadcrumbLink>
+                </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
 
