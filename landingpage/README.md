@@ -1,1 +1,0 @@
-this project currently is in under working . i used shedcn as frramwork and i use its commponents.and here given data is dummy. I Indrajitsinh Atodariya and my friend Swayam Goradiya contribute in this project . 
