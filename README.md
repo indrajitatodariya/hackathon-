@@ -1,1 +1,1 @@
-this project currently is in under working . i used shedcn as frramwork and i use its commponents.and here given data is dummy. I Indrajitsinh Atodariya and my friend Swayam Goradiya contribute in this project .
+this project currently is in under working . we used shedcn as framwork and we use its commponents.and here given data is dummy. we  are trying to built business dashboard.
